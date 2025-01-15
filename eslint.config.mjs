@@ -1,0 +1,33 @@
+import pluginJs from "@eslint/js";
+import stylisticTs from '@stylistic/eslint-plugin-ts';
+import globals from "globals";
+import tseslint from "typescript-eslint";
+
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  {
+    files: [ "**/*.{js,mjs,cjs,ts}" ]
+  },
+  {
+    languageOptions: { globals: globals.node }
+  },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    plugins: {
+      '@stylistic/ts': stylisticTs
+    }
+  },
+  {
+    'rules': {
+      '@stylistic/ts/indent': [ 'error', 2 ],
+      'max-len': [ 'error', { 'code': 180 } ],
+      'array-bracket-spacing': [ 'error', 'always' ],
+      'object-curly-spacing': [ 'error', 'always', { 'arraysInObjects': true, 'objectsInObjects': true } ],
+      'comma-spacing': [ 'error', { 'before': false, 'after': true } ],
+      'semi': [ 'error', 'always' ],
+      '@typescript-eslint/no-explicit-any': 'off'
+    }
+  }
+];

@@ -1,0 +1,29 @@
+{
+  "name": "sewio-homework",
+  "version": "1.0.0",
+  "description": "clean homework sandbox",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open --e2e --browser chrome",
+    "cy:run": "cypress run --e2e --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/perseity/sewio-homework.git"
+  },
+  "author": "vaculovic.marek@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perseity/sewio-homework/issues"
+  },
+  "homepage": "https://github.com/perseity/sewio-homework#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@stylistic/eslint-plugin-ts": "^2.13.0",
+    "cypress": "^13.17.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  }
+}
