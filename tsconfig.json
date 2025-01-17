@@ -7,13 +7,15 @@
     ],
     "types": [
       "cypress",
-      "node",
+      "node"
     ],
     "baseUrl": ".",
     "esModuleInterop": true,
   },
   "include": [
-    "**/*.ts",
-    "cypress.config.ts",
-  ]
+    "cypress/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+  ],
 }

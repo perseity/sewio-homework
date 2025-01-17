@@ -1,13 +1,16 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  // responseTimeout: 60000,
-  // defaultCommandTimeout: 10000,
+  viewportWidth: 1920,
+  viewportHeight: 1080,
   e2e: {
     specPattern: 'cypress/specs/**/*.cy.ts',
+    supportFile: 'cypress/support/e2e.ts'
   },
   env: {
-    username: 'default',
-    password: 'default'
+    wssUrl: 'wss://demo.sewio.net',
+    baseUrl: 'https://demo.sewio.net',
+
+    apiKey: 'dummy',
   }
 });

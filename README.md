@@ -8,7 +8,7 @@ npm install
 
 ## Running tests
 
-Env variables for `username` and `password` must be either changed in `cypress.config.ts`
+Env variables for `apiKey` must be either changed in `cypress.config.ts`
 or provided via commandline parameters.
 
 ### Headful
@@ -20,7 +20,7 @@ npm run cy:open
 or
 
 ```shell
-npm run cy:open -- --env username=demo_username,password=demo_password
+npm run cy:open -- --env apiKey=<apiKey>
 ```
 
 ### Headless
@@ -32,5 +32,5 @@ npm run cy:run
 or
 
 ```shell
-npm run cy:run -- --env username=demo_username,password=demo_password
+npm run cy:run -- --env apiKey=<apiKey>
 ```
